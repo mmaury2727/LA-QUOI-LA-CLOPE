@@ -19,14 +19,14 @@ public class Jump : MonoBehaviour
         moveDir = new Vector3(moveDir.x, moveDir.y, moveDir.z);
 
 #if UNITY_EDITOR || UNITY_STANDALONE // si on est sur PC
-        if (Input.GetKeyDown(KeyCode.Mouse1) && cc.isGrounded){
+        if (Input.GetKeyDown(KeyCode.Mouse0) && cc.isGrounded){
             moveDir.y = jumpForce;
         }
-
 #endif
 
 #if UNITY_ANDROID || UNITY_IPHONE // si on est sur mobile
         if(Input.touches.Length == 1 && cc.isGrounded){
+            moveDir.y = jumpForce;
         }
 #endif
         moveDir.y -= gravity * Time.deltaTime;
