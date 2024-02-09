@@ -8,11 +8,13 @@ public class PrendsTonSpray : MonoBehaviour
     [SerializeField] Image[] Jauge = new Image[10];
 
     int counter = 0;
-    bool isReady = true;
+
+    bool hasSpray = false;
+
     
     void Start()
     {
-        GoodTiming();
+        StartCoroutine("IncreaseJauge");
     }
 
     // Update is called once per frame
@@ -21,26 +23,33 @@ public class PrendsTonSpray : MonoBehaviour
         
     }
 
-    void GoodTiming()
+    public void Spray()
     {
-        if (isReady)
+        if (!hasSpray)
         {
-            isReady = false;
-            foreach (Image img in Jauge)
+            if (counter == 6)
             {
-                StartCoroutine("IncreaseJauge");
-                img.gameObject.SetActive(false);
-                Jauge[counter].gameObject.SetActive(true);
+                print("t'as gagné");
+
+            }
+            else
+            {
+                print("t'as perdu");
             }
         }
-
+        hasSpray = true;
     }
 
     IEnumerator IncreaseJauge()
     {
-        yield return new WaitForSeconds(0.7f);
-        isReady = true;
-        print(counter);
-        counter++;
+        while(counter < 9)
+        {
+            yield return new WaitForSeconds(0.7f);
+            Jauge[counter].gameObject.SetActive(false);
+            Jauge[counter + 1].gameObject.SetActive(true);
+            print(counter);
+            counter++;
+        }
+        Jauge[counter].gameObject.SetActive(false);
     }
 }

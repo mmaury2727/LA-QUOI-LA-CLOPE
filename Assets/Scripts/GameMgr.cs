@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameMgr : MonoBehaviour
 {
+    public static GameMgr gMgr;
+
     private bool timerEnded = false;
     private PlayerCollision pc;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        gMgr = this;
+    }
     void Start()
     {
         StartCoroutine("WinOrLose");
@@ -24,7 +29,7 @@ public class GameMgr : MonoBehaviour
         }
     }
 
-    IEnumerator WinOrLose() // On redonne le droit de tuer des ennemis aprés 0.8sec 
+    IEnumerator WinOrLose() 
     {
         yield return new WaitForSeconds(8f);
         timerEnded = true;
