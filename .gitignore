@@ -21,3 +21,7 @@ Logs
 UserSettings
 obj
 Temp
+
+# csproj files
+
+*.csproj
