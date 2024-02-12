@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4544a0659b11944ec9e0d388f27d9118
+labels:
+- City
+- Lot
+- Park
+- Parking
+- Props
+- Town
+timeCreated: 1489636303
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/City Props/ParkingLot01.prefab
+  uploadId: 181707

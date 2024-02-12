@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: bb2e57a5c4c104ff79b156f77695bc46
+labels:
+- Leaves
+- Spring
+- Tree
+- Vegetation
+timeCreated: 1489719382
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/Trees/Tree07.prefab
+  uploadId: 181707
