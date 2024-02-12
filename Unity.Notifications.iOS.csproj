@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6730092C-FDB3-2BA6-6A57-0E28C45047BF}</ProjectGuid>
+    <ProjectGuid>{B680A81B-BE1F-245C-5495-39558433FDAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Unity.Notifications.iOS</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -61,9 +61,19 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Game\1. Scripts\Game Manager\GameStats.cs" />
-    <Compile Include="Assets\Game\1. Scripts\Game Manager\GameManager.cs" />
-    <Compile Include="Assets\Game\1. Scripts\Game Manager\SceneLoader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationCenter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\AuthorizationRequest.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationsWrapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationAttachment.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationTriggers.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\iOSNotificationCategory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\PackageCache\com.unity.mobile.notifications@2.3.1\Runtime\iOS\Unity.Notifications.iOS.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -506,12 +516,76 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\Managed\UnityEngine\UnityEditor.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UWP.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.AppleTV.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.AppleTV.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2023.2.8f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@2.0.5\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -1026,132 +1100,12 @@
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Notifications.iOS.csproj">
-      <Project>{B680A81B-BE1F-245C-5495-39558433FDAE}</Project>
-      <Name>Unity.Notifications.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{206369D7-8234-C195-4380-82097712FDE7}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Profiling.Core.csproj">
-      <Project>{FEE98733-BD43-0E76-B3E6-E2DC858D37A4}</Project>
-      <Name>Unity.Profiling.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{61FA4FEE-DEE6-58D3-C03C-65102B1B4148}</Project>
-      <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{F4C437BB-57D2-E29A-4803-A89B9DD57D4F}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Notifications.csproj">
-      <Project>{E9AA57B0-0AE4-48E7-DB3D-02713E6579B7}</Project>
-      <Name>Unity.Notifications</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AdaptivePerformance.csproj">
-      <Project>{63A95EB3-DC99-4D12-A94B-CCD34F9DA058}</Project>
-      <Name>Unity.AdaptivePerformance</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{D925A11D-5F92-B217-1AC7-E5318DD787C8}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.Editor.csproj">
-      <Project>{9B84E681-C24C-ED09-97CC-0C7B2FDAFA91}</Project>
-      <Name>Unity.AdaptivePerformance.Simulator.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Notifications.Unified.csproj">
-      <Project>{0F8E0264-3737-0710-F134-3AC0EF5CB4F2}</Project>
-      <Name>Unity.Notifications.Unified</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{F70E0A2F-F853-EC69-001A-A1AD53D30F3D}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{FBC17063-C0A4-2ED0-F34D-E1045D4C25B3}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{80BD6425-669D-804D-EC4F-4EB64F362F91}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{E622A4E7-DE91-A9C5-0712-5A1806987BB6}</Project>
-      <Name>Unity.VisualScripting.State.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{45D09808-89D3-0E18-DD80-D792D044B565}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Notifications.Android.csproj">
-      <Project>{BC6AE295-7CB4-937B-2DC5-FE1CF832383B}</Project>
-      <Name>Unity.Notifications.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64.csproj">
-      <Project>{F1159406-F78E-0F4E-B249-B7A4A48D6C4A}</Project>
-      <Name>Unity.Toolchain.Win-x86_64-Linux-x86_64</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AdaptivePerformance.UI.Editor.csproj">
-      <Project>{91D01009-EE84-33A8-140F-9D4B1342AF73}</Project>
-      <Name>Unity.AdaptivePerformance.UI.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{DD1A4047-859E-4E8B-FF98-B239715607D7}</Project>
-      <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.Extension.csproj">
-      <Project>{9344FE53-D2B7-4A77-F984-01D27137C282}</Project>
-      <Name>Unity.AdaptivePerformance.Simulator.Extension</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
-      <Project>{06AD9D79-12F1-CE72-79C2-A4692A9EB664}</Project>
-      <Name>Unity.Sysroot.Linux_x86_64</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AdaptivePerformance.Profiler.Editor.csproj">
-      <Project>{FDD9A8FE-901C-EE3C-2FF3-C0E1F50057E6}</Project>
-      <Name>Unity.AdaptivePerformance.Profiler.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mobile.AndroidLogcat.Editor.csproj">
-      <Project>{86DA07FD-C347-53E3-29CF-48DD169E3C36}</Project>
-      <Name>Unity.Mobile.AndroidLogcat.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AdaptivePerformance.Editor.csproj">
-      <Project>{2C1426E6-062C-F4B2-D3AF-7C8D6B1793EF}</Project>
-      <Name>Unity.AdaptivePerformance.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{2C7B2602-54D5-5DE0-E8A8-4F6ED555A635}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{289B6A2D-345B-A0A4-022B-84F87DCD9CD0}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{5D3E9186-DC03-79F2-BEF1-F8D21FAAE135}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
-      <Project>{D14F4342-E49C-B204-6EA3-26AAFF45104D}</Project>
-      <Name>Unity.SysrootPackage.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
