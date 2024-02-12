@@ -56,14 +56,6 @@ public class NettoieDents : MonoBehaviour
         return positionImg;
     }
 
-    bool IsOnDirt(float xImg, float yImg, float xPointer, float yPointer)
-    {
-        if ((xPointer - 10 <= xImg || xImg <= xPointer + 10) && (yPointer - 10 <= yImg || yImg <= yPointer + 10))
-        {
-            return true;
-        }
-        return false;
-    }
 }
 
 public class ImageAvecCoordonnees
