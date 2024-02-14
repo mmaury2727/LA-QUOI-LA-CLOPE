@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 37c3f332c16484799ac2dea44c31446b
+labels:
+- Architecture
+- Bridge
+- Stairs
+timeCreated: 1489635167
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/Bridges/Bridge01.prefab
+  uploadId: 181707

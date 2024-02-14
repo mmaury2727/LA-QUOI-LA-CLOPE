@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 655202bf9bf874e1ba89df07a7858bbb
+labels:
+- City
+- Info
+- Props
+- Road
+- Sign
+- Town
+timeCreated: 1489636178
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/City Props/InfoSign01.prefab
+  uploadId: 181707

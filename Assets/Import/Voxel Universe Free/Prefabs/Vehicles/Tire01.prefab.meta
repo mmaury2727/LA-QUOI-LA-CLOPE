@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 71970303650f24d4d891049b8446d59d
+labels:
+- Car
+- Cartoon
+- Tire
+- Vehicle
+timeCreated: 1490153990
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/Vehicles/Tire01.prefab
+  uploadId: 181707

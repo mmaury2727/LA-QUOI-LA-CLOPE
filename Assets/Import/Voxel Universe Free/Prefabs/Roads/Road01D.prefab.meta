@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: b73fb0b5988264939bb62cc7fdb74f52
+labels:
+- Concrete
+- Pavement
+- Road
+- Street
+timeCreated: 1489717000
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/Roads/Road01D.prefab
+  uploadId: 181707
