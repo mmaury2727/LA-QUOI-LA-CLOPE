@@ -20,23 +20,26 @@ public class GameManager : MonoBehaviour
     {
         if (shuffledMiniGames.Count <= 0)
         {
-            Debug.Log("hey");
+            Debug.Log("Shuffle");
             shuffledMiniGames = ShuffleMiniGames();
         }
 
         if (!isRunning)
         {
-            Debug.Log(shuffledMiniGames.Count);
             int index = UnityEngine.Random.Range(0, shuffledMiniGames.Count - 1);
             LaunchMiniGame(shuffledMiniGames[index]);
             shuffledMiniGames.RemoveAt(index);
-            Debug.Log(shuffledMiniGames.Count);
         }
     }
 
     private List<string> ShuffleMiniGames()
     {
-        List<string> list = stats.miniGames;
+        List<string> list = new List<string>();
+
+        foreach (string gameName in stats.miniGames) 
+        { 
+            list.Add(gameName);
+        }
 
         int i = 0;
         int max = list.Count;

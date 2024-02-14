@@ -10,7 +10,13 @@ public class GameStats : MonoBehaviour
     [SerializeField] private int gameScore = 0;
     [SerializeField] private bool isMiniGameWinned = false;
 
-    private List<string> miniGamesNames = new List<string>();
+    private string[] miniGamesNames = {
+        "SautDeHaie",
+        "TempetesDeCigarettesGeantes",
+        "PrendsTonSpray",
+        "ArgentOuClope",
+        "BrosseToiLesDents"
+    };
 
     public static GameStats Instance { private set; get; }
 
@@ -39,7 +45,7 @@ public class GameStats : MonoBehaviour
         get { return gameScore; }
         set { gameScore = value; }
     }
-    public List<string> miniGames
+    public string[] miniGames
     {
         get { return miniGamesNames; }
     }
@@ -54,11 +60,5 @@ public class GameStats : MonoBehaviour
         {
             Destroy(Instance.gameObject);
         }
-
-        miniGamesNames.Add("SautDeHaie");
-        //miniGamesNames.Add("TempetesDeCigarettesGeantes");
-        //miniGamesNames.Add("PrendsTonSpray");
-        //miniGamesNames.Add("ArgentOuClope");
-        //miniGamesNames.Add("BrosseToiLesDents");
     }
 }
