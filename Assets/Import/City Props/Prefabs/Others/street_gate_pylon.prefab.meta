@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5baa0eb31d0ffe74c8c9daf4cf18c93f
+timeCreated: 1473424648
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 71368
+  packageName: City Props Pack
+  packageVersion: 1.0
+  assetPath: Assets/City Props/Prefabs/Others/street_gate_pylon.prefab
+  uploadId: 136659
