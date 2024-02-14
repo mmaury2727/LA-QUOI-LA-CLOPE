@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     public static PlayerCollision pc;
+    [SerializeField] private Animator anim;
 
     private bool isHit = false;
 
@@ -13,12 +14,12 @@ public class PlayerCollision : MonoBehaviour
         pc = this;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Clope")
+        if (other.gameObject.tag == "Clope")
         {
             isHit = true;
-
+            anim.SetBool("IsDown", true);
         }
     }
 

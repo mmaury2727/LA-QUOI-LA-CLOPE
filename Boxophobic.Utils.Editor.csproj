@@ -69,8 +69,8 @@
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledButtonDrawer.cs" />
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureSingleLineDrawer.cs" />
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledButtonDrawer.cs" />
-    <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledSpaceDrawer.cs" />
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledMono\StyledScriptableObjectEditor.cs" />
+    <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledSpaceDrawer.cs" />
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledRemapSliderDrawer.cs" />
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledToggleDrawer.cs" />
     <Compile Include="Assets\Import\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMaskDrawer.cs" />
