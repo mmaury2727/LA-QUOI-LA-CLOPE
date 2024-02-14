@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7ceeecc43bca4638872d0d2212a6fcf
+timeCreated: 1489633019
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Materials/GeneralMaterial.mat
+  uploadId: 181707

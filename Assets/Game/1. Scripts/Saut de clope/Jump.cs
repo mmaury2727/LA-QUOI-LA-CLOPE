@@ -6,6 +6,7 @@ public class Jump : MonoBehaviour
 {
     private CharacterController cc;
     private Vector3 moveDir;
+    [SerializeField] private Animator anim;
 
     [SerializeField] private float gravity;
     [SerializeField] float jumpForce;
@@ -17,6 +18,8 @@ public class Jump : MonoBehaviour
     void LateUpdate()
     {
         moveDir = new Vector3(moveDir.x, moveDir.y, moveDir.z);
+
+
 
 #if UNITY_EDITOR || UNITY_STANDALONE // si on est sur PC
         if (Input.GetKeyDown(KeyCode.Mouse0) && cc.isGrounded){
@@ -32,5 +35,6 @@ public class Jump : MonoBehaviour
         moveDir.y -= gravity * Time.deltaTime;
         cc.Move(moveDir * Time.deltaTime);
 
+        anim.SetBool("IsGrounded", cc.isGrounded);
     }
 }

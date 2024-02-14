@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: ab577bf95fd0e4a45a861bf583ceb5c2
+labels:
+- Architecture
+- Brick
+- Building
+- Fire
+- FireStation
+- Station
+- Urban
+- Water
+timeCreated: 1491756992
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91388
+  packageName: Voxel Universe Free
+  packageVersion: 1.0
+  assetPath: Assets/Voxel Universe Free/Prefabs/Buildings/FireStation01.prefab
+  uploadId: 181707
