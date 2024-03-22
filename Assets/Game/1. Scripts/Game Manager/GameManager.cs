@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator LaunchTimer()
     {
         isRunning = true;
-        yield return new WaitForSeconds(stats.timer);
+        yield return new WaitForSeconds(stats.timer + 2f);
         isRunning = false;
     }
 
@@ -70,5 +70,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(loader.ChangeMiniGame(gameName));
         StartCoroutine(LaunchTimer());
         isRunning = true;
+        GameStats.Instance.winned = false;
     }
 }
