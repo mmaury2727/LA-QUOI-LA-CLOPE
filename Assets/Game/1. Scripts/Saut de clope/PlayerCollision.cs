@@ -8,6 +8,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private Animator anim;
 
     private bool isHit = false;
+    private float delayBeforeFall = 0.0001f; 
 
     private void Awake()
     {
@@ -16,11 +17,17 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Clope")
+        if (other.gameObject.tag == "Clope" && !isHit)
         {
             isHit = true;
-            anim.SetBool("IsDown", true);
+            StartCoroutine(TriggerFallAnimation());
         }
+    }
+
+    IEnumerator TriggerFallAnimation()
+    {
+        yield return new WaitForSeconds(delayBeforeFall);
+        anim.SetBool("IsDown", true);
     }
 
     public bool GetIsHit()
