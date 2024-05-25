@@ -12,10 +12,10 @@ public class GameStats : MonoBehaviour
 
     private string[] miniGamesNames = {
         "SautDeHaie",
-        //"TempetesDeCigarettesGeantes",
-        //"PrendsTonSpray",
-        //"ArgentOuClope",
-        //"BrosseToiLesDents"
+        "TempetesDeCigarettesGeantes",
+        "PrendsTonSpray",
+        "ArgentOuClope",
+        "BrosseToiLesDents"
     };
 
     public static GameStats Instance { private set; get; }
