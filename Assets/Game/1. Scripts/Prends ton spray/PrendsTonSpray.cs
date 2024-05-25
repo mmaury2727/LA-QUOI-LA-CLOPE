@@ -64,7 +64,7 @@ public class PrendsTonSpray : MonoBehaviour
             if (GameOver != null) //quand il ne clique pas
             {
                 Animator animatorGameOver = GameOver.GetComponent<Animator>();
-                if ((animatorGameOver && GameOverSound) != null)
+                if ((animatorGameOver && GameOverSound) != false)
                 {
                     GameOverSound.Play();
                     animatorGameOver.enabled = true;
