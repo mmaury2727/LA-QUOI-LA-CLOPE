@@ -1,55 +1,161 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PrendsTonSpray : MonoBehaviour
 {
-    [SerializeField] Image[] Jauge = new Image[10];
+    public GameObject GameOver;
+    public GameObject ccSpray;
+    public GameObject click;
+    public GameObject Victory;
+    public GameObject SpraySmoke;
 
-    int counter = 0;
+    public AudioSource SpraySound; 
+    public AudioSource victorySound;
+    public AudioSource GameOverSound;
 
-    bool hasSpray = false;
+    private bool hasClickedAtRightMoment = false;
+    private bool hasClickedTooEarlyOrLate = false;
+    private bool isGameOver = false;
+    private float startTime;
 
-    
+    private Animator animatorClick;
+    private Animator animatorVictory;
+
+    private bool clickEnabled = true;
+
     void Start()
     {
-        StartCoroutine("IncreaseJauge");
+        animatorClick = click.GetComponent<Animator>();
+        animatorVictory = Victory.GetComponent<Animator>();
+        StartCoroutine(WaitForRightMoment());
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    IEnumerator EnableClickAfterDelay()
     {
-        
+        yield return new WaitForSeconds(3f); // Attendre 3 secondes avant d'activer le clic
+        clickEnabled = true; // Activer le clic après le délai
     }
 
-    public void Spray()
+    IEnumerator WaitForRightMoment()
     {
-        if (!hasSpray)
+                
+        if (animatorClick != null)
         {
-            if (counter == 6)
+            animatorClick.enabled = true;
+        }
+
+
+        yield return new WaitForSeconds(3f);
+        startTime = Time.time;
+
+        if (!hasClickedAtRightMoment && !hasClickedTooEarlyOrLate && !isGameOver)
+        {
+            if (animatorClick != null && !hasClickedAtRightMoment)
             {
-                print("t'as gagn�");
+                animatorClick.SetBool("setClick", true);
+                animatorVictory.enabled = false;
 
             }
-            else
+
+            yield return new WaitForSeconds(0.8f);
+
+            if (GameOver != null) //quand il ne clique pas
             {
-                print("t'as perdu");
+                Animator animatorGameOver = GameOver.GetComponent<Animator>();
+                if ((animatorGameOver && GameOverSound) != false)
+                {
+                    GameOverSound.Play();
+                    animatorGameOver.enabled = true;
+                }
             }
+
+            isGameOver = true;
         }
-        hasSpray = true;
     }
 
-    IEnumerator IncreaseJauge()
+    IEnumerator ActivateVictoryAnimation()
     {
-        while(counter < 9)
+        yield return new WaitForSeconds(0.1f);
+        animatorVictory.enabled = true;
+
+    }
+
+    void OnMouseDown()
+    {
+        if (clickEnabled && !isGameOver)
         {
-            yield return new WaitForSeconds(0.7f);
-            Jauge[counter].gameObject.SetActive(false);
-            Jauge[counter + 1].gameObject.SetActive(true);
-            print(counter);
-            counter++;
+            float clickTime = Time.time;
+
+            if (clickTime - startTime < 0.2f)
+            {
+                if (GameOver != null)
+                {
+                    Animator animatorGameOver = GameOver.GetComponent<Animator>();
+
+                    if (animatorGameOver != null)
+                    {
+                        animatorGameOver.enabled = true;
+                    }
+                }
+
+                hasClickedTooEarlyOrLate = true;
+                isGameOver = true;
+
+                if (GameOverSound != null)
+                {
+                    GameOverSound.Play();
+                }
+            }
+            else if (clickTime - startTime >= 1f && clickTime - startTime <= 3f) //victoire
+            {
+                Animator animatorVictory = Victory.GetComponent<Animator>();
+
+                if(SpraySmoke != null)
+                {
+                    SpraySmoke.SetActive(true);
+                }
+                
+                if (animatorVictory != null)
+                {
+                    StartCoroutine(ActivateVictoryAnimation());
+                    
+                    if(victorySound != null){
+                        victorySound.Play();
+                    }
+                }
+
+                if (SpraySound != null)
+                {
+                    SpraySound.Play();
+                }
+
+               // Debug.Log("Félicitations ! Vous avez gagné !");
+                hasClickedAtRightMoment = true;
+                isGameOver = true;
+            }
+            else if (!hasClickedAtRightMoment)
+            {
+
+                if (GameOver != null)
+                {
+                    
+                    Animator animatorGameOver = GameOver.GetComponent<Animator>();
+                    if (animatorGameOver != null)
+                    {
+                        animatorGameOver.enabled = true;
+                        // SpraySmoke.SetActive(false);
+                        // Victory.SetActive(false);
+
+                    }
+                }
+                hasClickedTooEarlyOrLate = true;
+                isGameOver = true;
+            }
+
+            clickEnabled = false;
+            ccSpray.GetComponent<Collider>().enabled = false;
         }
-        Jauge[counter].gameObject.SetActive(false);
     }
 }
