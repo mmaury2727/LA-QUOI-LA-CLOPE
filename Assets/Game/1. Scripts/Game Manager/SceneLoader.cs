@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private bool isNextGameLoaded = false;
-    private bool isCurrentGameLoaded = false;
-    private bool isGameReady = false;
     private string gameLoaded = "";
     private AsyncOperation loading;
 
