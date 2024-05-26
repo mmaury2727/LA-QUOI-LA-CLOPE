@@ -506,6 +506,9 @@ MonoBehaviour:
   - name: PrendsPasLaTaffe
     message: 
     interaction: 1
+  - name: TempetesDeCigarettesGeantes
+    message: 
+    interaction: 1
 --- !u!114 &1499817321
 MonoBehaviour:
   m_ObjectHideFlags: 0
