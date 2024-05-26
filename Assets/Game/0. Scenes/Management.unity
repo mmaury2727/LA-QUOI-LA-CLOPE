@@ -500,6 +500,9 @@ MonoBehaviour:
   - name: BrosseToiLesDents
     message: 
     interaction: 3
+  - name: BabyClope
+    message: 
+    interaction: 0
 --- !u!114 &1499817321
 MonoBehaviour:
   m_ObjectHideFlags: 0
