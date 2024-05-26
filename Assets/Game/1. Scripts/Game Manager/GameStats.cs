@@ -10,13 +10,23 @@ public class GameStats : MonoBehaviour
     [SerializeField] private int gameScore = 0;
     [SerializeField] private bool isMiniGameWinned = false;
 
-    private string[] miniGamesNames = {
-        "SautDeHaie",
-        "TempetesDeCigarettesGeantes",
-        "PrendsTonSpray",
-        "ArgentOuClope",
-        "BrosseToiLesDents"
-    };
+    [SerializeField] private List<MiniGame> miniGamesList;
+
+    [System.Serializable]
+    public struct MiniGame
+    {
+        public string name;
+        public string message;
+        public Interaction interaction;
+    }
+
+    public enum Interaction
+    {
+        Tap,
+        MultiTap,
+        Drag,
+        Rug
+    }
 
     public static GameStats Instance { private set; get; }
 
@@ -45,9 +55,9 @@ public class GameStats : MonoBehaviour
         get { return gameScore; }
         set { gameScore = value; }
     }
-    public string[] miniGames
+    public List<MiniGame> miniGames
     {
-        get { return miniGamesNames; }
+        get { return miniGamesList; }
     }
 
     private void Awake()

@@ -493,6 +493,16 @@ MonoBehaviour:
   playerLifes: 4
   gameScore: 0
   isMiniGameWinned: 0
+  miniGamesList:
+  - name: ArgentOuClope
+    message: 
+    interaction: 0
+  - name: BrosseToiLesDents
+    message: 
+    interaction: 0
+  - name: PrendsTonSpray
+    message: 
+    interaction: 0
 --- !u!114 &1499817321
 MonoBehaviour:
   m_ObjectHideFlags: 0

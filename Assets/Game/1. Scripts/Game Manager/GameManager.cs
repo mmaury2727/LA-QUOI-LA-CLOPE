@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
 using UnityEngine;
+using MiniGame = GameStats.MiniGame;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator animator = default;
 
     private GameStats stats;
-    private List<string> shuffledMiniGames = new List<string>();
+    private List<MiniGame> shuffledMiniGames = new List<MiniGame>();
+    private MiniGame currentGame;
 
     private bool isRunning = false;
     private bool canLoad = true;
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
             {
                 int index = UnityEngine.Random.Range(0, shuffledMiniGames.Count - 1);
 
-                LoadNextGame(shuffledMiniGames[index]);
+                LoadNextGame(shuffledMiniGames[index].name);
 
                 shuffledMiniGames.RemoveAt(index);
             }
@@ -46,13 +48,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private List<string> ShuffleMiniGames()
+    private List<MiniGame> ShuffleMiniGames()
     {
-        List<string> list = new List<string>();
+        List<MiniGame> list = new List<MiniGame>();
 
-        foreach (string gameName in stats.miniGames) 
+        foreach (MiniGame game in stats.miniGames) 
         { 
-            list.Add(gameName);
+            list.Add(game);
         }
 
         int i = 0;
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour
 
         while (i < max / 2)
         {
-            string value1 = list[i];
+            MiniGame value1 = list[i];
             int randInt = UnityEngine.Random.Range(0, max - 1);
 
             list[i] = list[randInt];
