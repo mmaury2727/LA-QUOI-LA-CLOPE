@@ -181,6 +181,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clope: {fileID: 2639492334528255502, guid: de80a382d60e8e4489d0fc0a6c185b10, type: 3}
+  xSpawnRange: 3.5
+  clopeSpawnTime: 0.8
+  startDelay: 0.5
 --- !u!4 &500323108
 Transform:
   m_ObjectHideFlags: 0
@@ -646,7 +649,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: f2c2d9e51a5f81e46b60d0efc6df5377, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1

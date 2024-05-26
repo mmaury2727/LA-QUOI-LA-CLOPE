@@ -20,6 +20,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.gameObject.tag == "Clope" && !isHit)
         {
             isHit = true;
+            print("touché");
             StartCoroutine(TriggerFallAnimation());
         }
     }
