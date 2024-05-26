@@ -494,15 +494,12 @@ MonoBehaviour:
   gameScore: 0
   isMiniGameWinned: 0
   miniGamesList:
-  - name: ArgentOuClope
+  - name: SautDeHaie
     message: 
     interaction: 0
   - name: BrosseToiLesDents
     message: 
-    interaction: 0
-  - name: PrendsTonSpray
-    message: 
-    interaction: 0
+    interaction: 3
 --- !u!114 &1499817321
 MonoBehaviour:
   m_ObjectHideFlags: 0

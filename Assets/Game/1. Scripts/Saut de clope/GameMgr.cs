@@ -9,6 +9,15 @@ public class GameMgr : MonoBehaviour
     private bool timerEnded = false;
     private PlayerCollision pc;
 
+    [SerializeField] GameObject victory;
+    //serializeField permet de rajouter des game object dans unity 
+
+    [SerializeField] GameObject lost;
+    [SerializeField] GameObject gameOverBackground;
+
+    [SerializeField] GameObject victoryBackground;
+
+
     private void Awake()
     {
         gMgr = this;
@@ -22,16 +31,18 @@ public class GameMgr : MonoBehaviour
     {
         if (timerEnded && !PlayerCollision.pc.GetIsHit())
         {
-            print("t'as gagné");
+            victory.SetActive(true);
+            victoryBackground.SetActive(true);
         }else if (timerEnded && PlayerCollision.pc.GetIsHit())
         {
-            print("t'as perdu CHEHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+            lost.SetActive(true);
+            gameOverBackground.SetActive(true);
         }
     }
 
     IEnumerator WinOrLose() 
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(3f);
         timerEnded = true;
     }
 
