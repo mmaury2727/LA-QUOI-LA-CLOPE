@@ -17,7 +17,7 @@ public class CoinHit : MonoBehaviour
 #endif
 
 #if UNITY_ANDROID || UNITY_IPHONE // si on est sur mobile
-        if(Input.touches.Length >= 1 && cc.isGrounded){
+        if(Input.touches.Length >= 1){
             animator.SetBool("Hit", true);
         }
 #endif
