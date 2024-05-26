@@ -503,6 +503,9 @@ MonoBehaviour:
   - name: BabyClope
     message: 
     interaction: 0
+  - name: PrendsPasLaTaffe
+    message: 
+    interaction: 1
 --- !u!114 &1499817321
 MonoBehaviour:
   m_ObjectHideFlags: 0

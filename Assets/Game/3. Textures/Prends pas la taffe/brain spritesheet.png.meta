@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 5bf9818417aecbc4399333907235818f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brain spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 627
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 4, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8e5681dfdcf384fbdfbf587a9552d1
+      internalID: 332368717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 0
+        width: 630
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 7, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3f9d8fb6958ac4a9876da893c4210b
+      internalID: -1549614784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 636
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 6, y: 2, z: 2, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ada27295179fdf42b7266f543240bca
+      internalID: 439807978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 236.75781, y: -239.85538}
+      - {x: 301.0498, y: -154.11984}
+      - {x: 301.0498, y: 62.26033}
+      - {x: 272.4756, y: 206.17355}
+      - {x: 165.32227, y: 247}
+      - {x: -194.91699, y: 247}
+      - {x: -329.62402, y: 90.838844}
+      - {x: -329.62402, y: -239.85538}
+      - {x: -328.60352, y: -241.8967}
+      - {x: 214.30664, y: -241.8967}
+    - - {x: -415.34668, y: -185.76033}
+      - {x: -415.34668, y: 135.74794}
+      - {x: -571.4844, y: 243.93802}
+      - {x: -909.27246, y: 243.93802}
+      - {x: -1045, y: 110.23141}
+      - {x: -1045, y: -220.46281}
+      - {x: -1016.4258, y: -245.97934}
+      - {x: -606.18164, y: -245.97934}
+    - - {x: 979.6875, y: -232.71075}
+      - {x: 1045, y: -135.74794}
+      - {x: 1045, y: 77.57025}
+      - {x: 1012.34375, y: 155.1405}
+      - {x: 836.8164, y: 242.91736}
+      - {x: 634.75586, y: 242.91736}
+      - {x: 510.2539, y: 189.84297}
+      - {x: 448.00293, y: 92.880165}
+      - {x: 413.30566, y: -33.68182}
+      - {x: 413.30566, y: -173.5124}
+      - {x: 417.3877, y: -198.00827}
+      - {x: 480.65918, y: -247}
+      - {x: 780.6885, y: -247}
+    physicsShape:
+    - - {x: 249.0039, y: -231.69008}
+      - {x: 301.0498, y: -132.68596}
+      - {x: 301.0498, y: 8.165289}
+      - {x: 235.7373, y: 175.55373}
+      - {x: 75.51758, y: 247}
+      - {x: -229.61426, y: 247}
+      - {x: -328.60352, y: 44.909092}
+      - {x: -328.60352, y: -219.44215}
+      - {x: -306.15234, y: -240.87604}
+      - {x: 45.92285, y: -240.87604}
+    - - {x: -416.3672, y: -179.63637}
+      - {x: -416.3672, y: 42.867767}
+      - {x: -455.14648, y: 176.57439}
+      - {x: -604.1406, y: 242.91736}
+      - {x: -982.749, y: 242.91736}
+      - {x: -1045, y: 89.818184}
+      - {x: -1045, y: -244.95868}
+      - {x: -603.1201, y: -244.95868}
+    - - {x: 1043.9795, y: -195.96695}
+      - {x: 1043.9795, y: 16.330578}
+      - {x: 955.1953, y: 241.8967}
+      - {x: 634.75586, y: 241.8967}
+      - {x: 414.32617, y: 124.52066}
+      - {x: 414.32617, y: -245.97934}
+      - {x: 1007.2412, y: -245.97934}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      brain spritesheet_0: 408819294
+      brain spritesheet_1: -565418067
+      brain spritesheet_2: 332368717
+      brain spritesheet_3: -1549614784
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
