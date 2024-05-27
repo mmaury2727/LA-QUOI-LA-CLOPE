@@ -32,13 +32,17 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnClope() 
     {
+        GameObject newClope;
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
         float randomRotX = Random.Range(-xSpawnRange, xSpawnRange);
         float randomRotY = Random.Range(-xSpawnRange, xSpawnRange);
         Vector3 spawnPos = new Vector3(randomX, ySpawn, zSpawn);
         Quaternion spawnRot = new Quaternion(randomRotX, randomRotY, 0, 90);
         if (count < manager.scoreToWin)
-            Instantiate(clope, spawnPos, spawnRot);
+        {
+            newClope = Instantiate(clope, spawnPos, spawnRot);
+            newClope.transform.parent = transform;
+        }
         count++;
     }
 
