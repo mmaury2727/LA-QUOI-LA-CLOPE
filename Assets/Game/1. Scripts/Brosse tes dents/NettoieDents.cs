@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class NettoieDents : MonoBehaviour
 {
     public Text m_Text;
+    [SerializeField]
+
 
     private ImageAvecCoordonnees[] tabImgWithCoord;
 
@@ -15,27 +17,29 @@ public class NettoieDents : MonoBehaviour
     private bool canClean = true;
 
 
-    [SerializeField] GameObject[] tabImages;
-
+    //[SerializeField] GameObject[] tabImages;
+    [SerializeField] GameObject doigt;
 
 
     private void Start()
     {
-        tabImgWithCoord = new ImageAvecCoordonnees[tabImages.Length];
+        /*tabImgWithCoord = new ImageAvecCoordonnees[tabImages.Length];
         int counter = 0;
-        print(tabImages.Length);
+        //print(tabImages.Length);
         foreach (GameObject img in tabImages)
         {
-            /* tabImgWithCoord[counter] = new ImageAvecCoordonnees(img, CalcPosition(img)[0], CalcPosition(img)[1]);
-             print(tabImgWithCoord[counter].X + " " + tabImgWithCoord[counter].Y);
-             counter++; */
+             tabImgWithCoord[counter] = new ImageAvecCoordonnees(img, CalcPosition(img)[0], CalcPosition(img)[1]);
+             //print(tabImgWithCoord[counter].X + " " + tabImgWithCoord[counter].Y);
+             counter++; 
 
             tabImgWithCoord[counter] = new ImageAvecCoordonnees(img, dentX[counter], dentY[counter]);
-            print(tabImgWithCoord[counter].X + " " + tabImgWithCoord[counter].Y);
+            //print(tabImgWithCoord[counter].X + " " + tabImgWithCoord[counter].Y);
             counter++;
 
-        }
+        }*/
     }
+
+
 
     void Update()
     {
@@ -45,9 +49,12 @@ public class NettoieDents : MonoBehaviour
 
             m_Text.text = "Touch Position : " + touch.position;
 
+            doigt.transform.position = new Vector3(getXDoigtCoord(touch.position.x), getYDoigtCoord(touch.position.y), doigt.transform.position.z);
+            //print(doigt.transform.position);
+
             int counter = 0;
 
-            foreach (GameObject dent in tabImages)
+            /*foreach (GameObject dent in tabImages)
             {
                 if ((tabImgWithCoord[counter].X - 15 <= touch.position.x && touch.position.x <= tabImgWithCoord[counter].X + 15) && 
                     (tabImgWithCoord[counter].Y - 30 <= touch.position.y && touch.position.y <= tabImgWithCoord[counter].Y + 30))
@@ -68,7 +75,7 @@ public class NettoieDents : MonoBehaviour
                     
                 }
                 counter++;
-            }
+            }*/
 
         }
         else
@@ -76,6 +83,8 @@ public class NettoieDents : MonoBehaviour
             m_Text.text = "No touch contacts";
         }
     }
+
+
 
     float[] CalcPosition(GameObject dent)
     {
@@ -96,6 +105,20 @@ public class NettoieDents : MonoBehaviour
         return false;
     }
 
+    float getXDoigtCoord(float coord)
+    {
+        if (coord >= 540)
+        {
+            return (coord - 540) * 5.7f / 540f;
+        } else { return (coord - 540) * 5.7f / 540f; }
+    }
+
+    float getYDoigtCoord(float coord)
+    {
+        if(coord <= 1200) { return (coord - 864) * 9f / 864f; }
+        return doigt.transform.position.y;
+    }
+
     IEnumerator CanClean()
     {
         yield return new WaitForSeconds(0.1f);
@@ -109,7 +132,7 @@ public class ImageAvecCoordonnees
     public float X { get; set; }
     public float Y { get; set; }
     public float Difficulty { get; set; }
-    public float Alpha { get; set; }
+    //public float Alpha { get; set; }
 
     public ImageAvecCoordonnees(GameObject dent, float x, float y, int difficulty = 0, int alpha = 1)
     {
@@ -117,9 +140,37 @@ public class ImageAvecCoordonnees
         X = x;
         Y = y;
         Difficulty = difficulty;
-        Alpha = alpha;
+        //Alpha = alpha;
 
     }
 }
 
 
+/*using UnityEngine;
+
+public class TouchColliderDetection : MonoBehaviour
+{
+    void Update()
+    {
+        if (Input.touchCount >= 1)
+        {
+            // The pos of the touch on the screen
+            Vector2 vTouchPos = Input.GetTouch(0).position;
+
+            // The ray to the touched object in the world
+            Ray ray = Camera.main.ScreenPointToRay(vTouchPos);
+
+            // Your raycast handling
+            RaycastHit vHit;
+            if (Physics.Raycast(ray.origin, ray.direction, out vHit))
+            {
+                if (vHit.transform.tag == "Player")
+                {
+                    Destroy(vHit.collider.gameObject);
+                }
+            }
+        }
+    }
+
+
+}*/
