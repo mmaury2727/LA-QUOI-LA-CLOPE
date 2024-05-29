@@ -7,6 +7,11 @@ public class OnTapPPLT : MonoBehaviour
     [SerializeField] private Rigidbody rb = default;
     [SerializeField] private int forceStrength = default;
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayAudio("Hearth Beat");
+    }
+
     void LateUpdate()
     {
 

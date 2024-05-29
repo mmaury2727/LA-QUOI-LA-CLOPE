@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NettoieDents : MonoBehaviour
 {
-    public Text m_Text;
+    private bool canPlayAudio = true;
     [SerializeField]
 
 
@@ -23,20 +23,7 @@ public class NettoieDents : MonoBehaviour
 
     private void Start()
     {
-        /*tabImgWithCoord = new ImageAvecCoordonnees[tabImages.Length];
-        int counter = 0;
-        //print(tabImages.Length);
-        foreach (GameObject img in tabImages)
-        {
-             tabImgWithCoord[counter] = new ImageAvecCoordonnees(img, CalcPosition(img)[0], CalcPosition(img)[1]);
-             //print(tabImgWithCoord[counter].X + " " + tabImgWithCoord[counter].Y);
-             counter++; 
-
-            tabImgWithCoord[counter] = new ImageAvecCoordonnees(img, dentX[counter], dentY[counter]);
-            //print(tabImgWithCoord[counter].X + " " + tabImgWithCoord[counter].Y);
-            counter++;
-
-        }*/
+        canPlayAudio = true;
     }
 
 
@@ -45,42 +32,25 @@ public class NettoieDents : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
+            if (canPlayAudio){
+                AudioManager.Instance.PlayAudio("Outil dentiste");
+                canPlayAudio = false;
+            }
+            
             Touch touch = Input.GetTouch(0);
 
-            m_Text.text = "Touch Position : " + touch.position;
 
             doigt.transform.position = new Vector3(getXDoigtCoord(touch.position.x), getYDoigtCoord(touch.position.y), doigt.transform.position.z);
             //print(doigt.transform.position);
 
             int counter = 0;
 
-            /*foreach (GameObject dent in tabImages)
-            {
-                if ((tabImgWithCoord[counter].X - 15 <= touch.position.x && touch.position.x <= tabImgWithCoord[counter].X + 15) && 
-                    (tabImgWithCoord[counter].Y - 30 <= touch.position.y && touch.position.y <= tabImgWithCoord[counter].Y + 30))
-                {
-                    if (tabImgWithCoord[counter].Difficulty != 3 && canClean)
-                    {
-                        canClean = false;
-                        StartCoroutine("CanClean");
-                        tabImgWithCoord[counter].Difficulty++;
-                        tabImgWithCoord[counter].Alpha -= 0.3f;
-                        dent.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, tabImgWithCoord[counter].Alpha); 
-                    }
-                    else if (canClean) {
-                        canClean = false;
-                        StartCoroutine("CanClean");
-                        dent.gameObject.SetActive(false); 
-                    }
-                    
-                }
-                counter++;
-            }*/
 
         }
         else
         {
-            m_Text.text = "No touch contacts";
+            AudioManager.Instance.StopAudio();
+            canPlayAudio = true;
         }
     }
 

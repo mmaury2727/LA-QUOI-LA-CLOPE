@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
     public void FailMenu()
     {
         retryTab.SetActive(true);
+        AudioManager.Instance.Fail();
     }
 
     public void UpdateGameStart(MiniGame game)

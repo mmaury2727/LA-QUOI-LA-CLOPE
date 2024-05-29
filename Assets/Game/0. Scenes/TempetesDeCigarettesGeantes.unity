@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416fe3ff75f57e6459a064190ddf4179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 3
+  timer: 1
   manager: {fileID: 814426129}
 --- !u!4 &1081182002
 Transform:
@@ -539,7 +539,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202929553}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1202929555
 Camera:
   m_ObjectHideFlags: 0

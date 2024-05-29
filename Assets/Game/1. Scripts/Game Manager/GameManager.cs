@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
     private void LoadNextGame(MiniGame game)
     {
         canLoad = false;
+        AudioManager.Instance.StopAudio();
 
         if (game.landscapeMode)
         {
