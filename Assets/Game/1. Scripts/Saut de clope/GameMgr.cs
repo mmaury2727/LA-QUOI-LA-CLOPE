@@ -59,7 +59,7 @@ public class GameMgr : MonoBehaviour
 
     IEnumerator WinOrLose() 
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5.5f);
         timerEnded = true;
     }
 
