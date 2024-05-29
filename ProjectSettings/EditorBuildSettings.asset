@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Game/0. Scenes/BrosseToiLesDents.unity
     guid: ff7ce69fc4722f448b4f1fa95c429337
   - enabled: 1
-    path: Assets/Game/0. Scenes/SautDeHaie.unity
-    guid: 117dbfc5345d47949a098ab003d5d1ef
-  - enabled: 1
     path: Assets/Game/0. Scenes/TempetesDeCigarettesGeantes.unity
     guid: bdf3b32fa4cb0ee48a2146f39e5f6322
   - enabled: 1
@@ -23,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/0. Scenes/PrendsPasLaTaffe.unity
     guid: 6a9beb7e53e27164e894c6c95b2793e7
+  - enabled: 1
+    path: Assets/Game/0. Scenes/SautDeHaie.unity
+    guid: 117dbfc5345d47949a098ab003d5d1ef
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: e41e62ca126dac94ca374766bd7ebc95, type: 2}
   m_UseUCBPForAssetBundles: 0
