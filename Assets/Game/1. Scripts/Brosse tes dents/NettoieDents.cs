@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class NettoieDents : MonoBehaviour
 {
-    public Text m_Text;
     private bool canPlayAudio = true;
     [SerializeField]
 
@@ -40,7 +39,6 @@ public class NettoieDents : MonoBehaviour
             
             Touch touch = Input.GetTouch(0);
 
-            m_Text.text = "Touch Position : " + touch.position;
 
             doigt.transform.position = new Vector3(getXDoigtCoord(touch.position.x), getYDoigtCoord(touch.position.y), doigt.transform.position.z);
             //print(doigt.transform.position);
@@ -53,7 +51,6 @@ public class NettoieDents : MonoBehaviour
         {
             AudioManager.Instance.StopAudio();
             canPlayAudio = true;
-            m_Text.text = "No touch contacts";
         }
     }
 

@@ -34,6 +34,7 @@ public class GameMgr : MonoBehaviour
     {
         if (timerEnded && !PlayerCollision.pc.GetIsHit())
         {
+            GameStats.Instance.winned = true;
             print("on gagne");
             if (canPlayAudioClip)
             {

@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
             { "But Baby", butBaby },
             { "Loupe Baby", loupeBaby },
             { "Clope Corbeille", clopeCorbeille },
-            { "Herbe brule", herbeBrule },
+            { "Herbe Brule", herbeBrule },
             { "Victoire Corbeille", victoireCorbeille },
             { "Victoire Dents", victoireDents },
             { "Tape taffe", tapeTaffe },

@@ -102,6 +102,7 @@ public class Manager : MonoBehaviour
         camera.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         AudioManager.Instance.PlayAudio("Victoire Corbeille");
         won = true;
+        GameStats.Instance.winned = true;
         Instantiate(winAnim, winAnim.transform.position, winAnim.transform.rotation);
         spawnManager.StopSpawning();
     }

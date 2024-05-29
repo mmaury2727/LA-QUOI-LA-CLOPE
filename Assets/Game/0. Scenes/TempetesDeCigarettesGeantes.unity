@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416fe3ff75f57e6459a064190ddf4179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 3
+  timer: 1
   manager: {fileID: 814426129}
 --- !u!4 &1081182002
 Transform:

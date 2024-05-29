@@ -15,6 +15,7 @@ public class BlowVictoryManager : MonoBehaviour
 
     public void Win()
     {
+        GameStats.Instance.winned = true;
         brainAnim.SetBool("IsWinned", true);
         lungsAnim.SetBool("IsWinned", true);
         heartAnim.SetBool("IsWinned", true);

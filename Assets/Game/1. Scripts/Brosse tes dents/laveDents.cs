@@ -100,6 +100,7 @@ public class laveDents : MonoBehaviour
                     canPlayAudio = false;
                 }
                 print("win");
+                GameStats.Instance.winned = true;
             } 
         }
 
