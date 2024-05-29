@@ -1812,6 +1812,7 @@ MonoBehaviour:
   defaiteTaffe: {fileID: 8300000, guid: 0511bf158a54d9e418a2a6ef8a0b92a2, type: 3}
   hearthBeat: {fileID: 8300000, guid: 6446a33dd31cfd546a9fec460355bc0e, type: 3}
   music: {fileID: 8300000, guid: 459339617e073d34e977025fe5e8ab98, type: 3}
+  defeatMusic: {fileID: 8300000, guid: 0ab5ae11985112e438004474dc58b626, type: 3}
   effectAudioSource: {fileID: 1123783044}
   musicAudioSource: {fileID: 1123783046}
 --- !u!82 &1123783044

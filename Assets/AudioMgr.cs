@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip hearthBeat;
 
     [SerializeField] AudioClip music;
+    [SerializeField] AudioClip defeatMusic;
 
     [SerializeField] AudioSource effectAudioSource;
     [SerializeField] AudioSource musicAudioSource;
@@ -88,5 +89,15 @@ public class AudioManager : MonoBehaviour
         {
             effectAudioSource.Stop();
         }
+    }
+
+    public void Fail()
+    {
+        musicAudioSource.Stop();
+        effectAudioSource.Stop();
+        musicAudioSource.loop = false;
+
+        musicAudioSource.clip = defeatMusic;
+        musicAudioSource.Play();
     }
 }
