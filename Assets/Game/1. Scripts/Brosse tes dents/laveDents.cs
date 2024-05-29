@@ -19,6 +19,8 @@ public class laveDents : MonoBehaviour
     int dent13Counter = 0;
     int dent14Counter = 0;
 
+    private bool canPlayAudio = true;
+
     private void OnTriggerEnter(Collider other)
     {
         bool hasWin = false;
@@ -89,9 +91,15 @@ public class laveDents : MonoBehaviour
 
             }
 
-            if (dent10Counter >= 5 && dent2Counter >= 5 && dent3Counter >= 5 && dent4Counter >= 5 && dent5Counter >= 5 && dent6Counter >= 5 && dent7Counter >= 5 && dent8Counter >= 5 && dent9Counter >= 5 && dent10Counter >= 5 && dent11Counter >= 5 && dent12Counter >= 5 && dent13Counter >= 5 && dent14Counter >= 5)
+            if (dent1Counter >= 5 && dent2Counter >= 5 && dent3Counter >= 5 && dent4Counter >= 5 && dent5Counter >= 5 && dent6Counter >= 5 && dent7Counter >= 5 && dent8Counter >= 5 && dent9Counter >= 5 && dent10Counter >= 5 && dent11Counter >= 5 && dent12Counter >= 5 && dent13Counter >= 5 && dent14Counter >= 5)
             {
                 hasWin = true;
+                if (canPlayAudio)
+                {
+                    AudioManager.Instance.PlayAudio("Victoire Dents");
+                    canPlayAudio = false;
+                }
+                print("win");
             } 
         }
 

@@ -67,6 +67,7 @@ public class Manager : MonoBehaviour
 
     public void UpdateScore(int addToScore)
     {
+        AudioManager.Instance.PlayAudio("Clope Corbeille");
         score += addToScore;
         if (score >= scoreToWin) EndGame();
     }
@@ -83,6 +84,7 @@ public class Manager : MonoBehaviour
     public void LoseGame()
     {
         // camera.GetComponent<Follow>().enabled = true;
+        AudioManager.Instance.PlayAudio("Herbe Brule");
         camera.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         lost = true;
         Instantiate(loseAnim, loseAnim.transform.position, loseAnim.transform.rotation);
@@ -98,6 +100,7 @@ public class Manager : MonoBehaviour
     {
         // camera.GetComponent<Follow>().enabled = true;
         camera.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        AudioManager.Instance.PlayAudio("Victoire Corbeille");
         won = true;
         Instantiate(winAnim, winAnim.transform.position, winAnim.transform.rotation);
         spawnManager.StopSpawning();

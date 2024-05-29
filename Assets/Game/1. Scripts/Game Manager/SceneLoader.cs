@@ -30,6 +30,7 @@ public class SceneLoader : MonoBehaviour
         if (gameLoaded != "")
         {
             StartCoroutine(UnloadCurrentGame());
+            AudioManager.Instance.StopAudio();
             yield return false;
         }
 

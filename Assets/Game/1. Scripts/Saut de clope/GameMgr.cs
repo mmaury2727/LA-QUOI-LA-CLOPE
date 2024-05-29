@@ -7,7 +7,8 @@ public class GameMgr : MonoBehaviour
     public static GameMgr gMgr;
 
     private bool win = true;
-    private bool timerEnded = false; 
+    private bool timerEnded = false;
+    private bool canPlayAudioClip = true;
     private PlayerCollision pc;
 
     [SerializeField] GameObject victory;
@@ -25,6 +26,8 @@ public class GameMgr : MonoBehaviour
     void Start()
     {
         StartCoroutine("WinOrLose");
+        AudioManager.Instance.PlayAudio("Ambiance saut de clope");
+        canPlayAudioClip = true;
     }
 
     private void Update()
@@ -32,11 +35,22 @@ public class GameMgr : MonoBehaviour
         if (timerEnded && !PlayerCollision.pc.GetIsHit())
         {
             print("on gagne");
+            if (canPlayAudioClip)
+            {
+                AudioManager.Instance.PlayAudio("Victoire Saut De Clope");
+                canPlayAudioClip = false;
+            }
+            
             victory.SetActive(true);
             victoryBackground.SetActive(true);
         }else if (timerEnded && PlayerCollision.pc.GetIsHit())
         {
             print("on perd");
+            if (canPlayAudioClip)
+            {
+                AudioManager.Instance.PlayAudio("Defaite saut de clope");
+                canPlayAudioClip = false;
+            }
             lost.SetActive(true);
             gameOverBackground.SetActive(true);
         }

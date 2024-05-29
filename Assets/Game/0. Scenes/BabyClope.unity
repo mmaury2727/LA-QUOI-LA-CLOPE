@@ -293,7 +293,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297080959}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &297080961
 Camera:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: f2c2d9e51a5f81e46b60d0efc6df5377, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1

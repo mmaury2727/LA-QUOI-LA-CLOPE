@@ -13,6 +13,7 @@ public class BabyClopeVictoryManager : MonoBehaviour
 
     public void Win()
     {
+        AudioManager.Instance.PlayAudio("But Baby");
         GameStats.Instance.winned = true;
         playerAnimator.SetBool("Win", true);
         keeperAnimator.SetBool("Win", true);
