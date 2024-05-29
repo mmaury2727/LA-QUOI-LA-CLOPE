@@ -8,7 +8,7 @@ public class GameStats : MonoBehaviour
     [SerializeField] private float miniGamesTimer = 1f;
     [SerializeField] private int playerLifes = 4;
     [SerializeField] private int gameScore = 0;
-    [SerializeField] private bool isMiniGameWinned = false;
+    [SerializeField] private bool isMiniGameWinned = true;
 
     [SerializeField] private List<MiniGame> miniGamesList;
 
@@ -18,6 +18,7 @@ public class GameStats : MonoBehaviour
         public string name;
         public string message;
         public Interaction interaction;
+        public bool landscapeMode;
     }
 
     public enum Interaction
