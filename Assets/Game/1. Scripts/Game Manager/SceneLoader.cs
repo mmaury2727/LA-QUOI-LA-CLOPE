@@ -6,60 +6,42 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private bool isNextGameLoaded = false;
-    private bool isCurrentGameLoaded = false;
-    private bool isGameReady = false;
     private string gameLoaded = "";
+    private AsyncOperation loading;
 
-    public bool isReady
-    {
-        get { return isGameReady; }
-        set { isGameReady = value; }
-    }
     private IEnumerator LoadNextGame(string gameName)
     {
-        isNextGameLoaded = false;
+        loading = SceneManager.LoadSceneAsync(gameName, LoadSceneMode.Additive);
+        loading.allowSceneActivation = false;
+        gameLoaded = gameName;
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameName, LoadSceneMode.Additive);
-
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
-
-        isNextGameLoaded = true;
+        yield return true;
     }
     private IEnumerator UnloadCurrentGame()
     {
-        isCurrentGameLoaded = true;
 
-        AsyncOperation asyncLoad = SceneManager.UnloadSceneAsync(gameLoaded);
+        SceneManager.UnloadSceneAsync(gameLoaded);
 
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
-
-        isCurrentGameLoaded = false;
+        yield return true;
     }
 
     public IEnumerator ChangeMiniGame(string gameName)
     {
-        isGameReady = false;
-
         if (gameLoaded != "")
         {
             StartCoroutine(UnloadCurrentGame());
+            yield return false;
         }
 
         StartCoroutine(LoadNextGame(gameName));
-
-        while (isCurrentGameLoaded && !isNextGameLoaded)
-        {
-            yield return null;
-        }
+        yield return true;
 
         gameLoaded = gameName;
-        isGameReady = true;
+    }
+
+    public IEnumerator ActivateMiniGame()
+    {
+        loading.allowSceneActivation = true;
+        yield return true;
     }
 }

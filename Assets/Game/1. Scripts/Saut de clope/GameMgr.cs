@@ -6,8 +6,17 @@ public class GameMgr : MonoBehaviour
 {
     public static GameMgr gMgr;
 
-    private bool timerEnded = false;
+    private bool win = true;
+    private bool timerEnded = false; 
     private PlayerCollision pc;
+
+    [SerializeField] GameObject victory;
+
+    [SerializeField] GameObject lost;
+    [SerializeField] GameObject gameOverBackground;
+
+    [SerializeField] GameObject victoryBackground;
+
 
     private void Awake()
     {
@@ -22,16 +31,20 @@ public class GameMgr : MonoBehaviour
     {
         if (timerEnded && !PlayerCollision.pc.GetIsHit())
         {
-            print("t'as gagné");
+            print("on gagne");
+            victory.SetActive(true);
+            victoryBackground.SetActive(true);
         }else if (timerEnded && PlayerCollision.pc.GetIsHit())
         {
-            print("t'as perdu CHEHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+            print("on perd");
+            lost.SetActive(true);
+            gameOverBackground.SetActive(true);
         }
     }
 
     IEnumerator WinOrLose() 
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(7f);
         timerEnded = true;
     }
 
